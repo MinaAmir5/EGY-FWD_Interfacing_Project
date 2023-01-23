@@ -1,0 +1,128 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Mina Girgis, Udacity, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.38.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      UL2CM3.DLL V1.164.8.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+D:\CU\Others\Udacity\ARM_CORTEX_M4\ARM_CORTEX_M4.uvprojx
+Project File Date:  01/23/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Project1'
+NVIC_Prog.c(2): warning: In file included from...
+../ARM_CORTEX_M4/NVIC_Private.h(90): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+NVIC_Prog.c(19): warning: implicit conversion loses integer precision: 'int' to 'u8' (aka 'unsigned char') [-Wimplicit-int-conversion]
+        NVIC_REGs -> PRI[Local_U8_RegNumber] = (Copy_U8_IntPriority << 5);
+                                             ~  ~~~~~~~~~~~~~~~~~~~~^~~~
+2 warnings generated.
+compiling NVIC_Prog.c...
+../../AMIT/AVR_ATmega32/APP/main.c(15): warning: no previous extern declaration for non-static variable 'Global_A_U16_TimeOn' [-Wmissing-variable-declarations]
+u16 Global_A_U16_TimeOn=1;
+    ^
+../../AMIT/AVR_ATmega32/APP/main.c(15): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+u16 Global_A_U16_TimeOn=1;
+^
+../../AMIT/AVR_ATmega32/APP/main.c(16): warning: no previous extern declaration for non-static variable 'Global_A_U16_TimeOff' [-Wmissing-variable-declarations]
+u16 Global_A_U16_TimeOff=1;
+    ^
+../../AMIT/AVR_ATmega32/APP/main.c(16): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+u16 Global_A_U16_TimeOff=1;
+^
+../../AMIT/AVR_ATmega32/APP/main.c(17): warning: no previous extern declaration for non-static variable 'Global_A_U16_CounterOn' [-Wmissing-variable-declarations]
+u16 Global_A_U16_CounterOn=0;
+    ^
+../../AMIT/AVR_ATmega32/APP/main.c(17): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+u16 Global_A_U16_CounterOn=0;
+^
+../../AMIT/AVR_ATmega32/APP/main.c(18): warning: no previous extern declaration for non-static variable 'Global_A_U16_CounterOff' [-Wmissing-variable-declarations]
+u16 Global_A_U16_CounterOff=0;
+    ^
+../../AMIT/AVR_ATmega32/APP/main.c(18): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+u16 Global_A_U16_CounterOff=0;
+^
+../../AMIT/AVR_ATmega32/APP/main.c(20): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+int main()
+        ^
+         void
+../../AMIT/AVR_ATmega32/APP/main.c(24): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+        u16 Local_A_U16_InputTimeOn=0;
+            ^
+6 warnings generated.
+compiling main.c...
+SysTick_Prog.c(2): warning: In file included from...
+../ARM_CORTEX_M4/SysTick_Private.h(30): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+SysTick_Prog.c(13): warning: implicit conversion from 'unsigned long' to 'float' may lose precision [-Wimplicit-int-float-conversion]
+        f32 Local_U32_TotalTicks = (Copy_U32_DesiredTime * 1000) / Local_U32_TickTime;
+                                    ~~~~~~~~~~~~~~~~~~~~~^~~~~~  ~
+SysTick_Prog.c(14): warning: implicit conversion turns floating-point number into integer: 'float' to 'u32' (aka 'unsigned long') [-Wfloat-conversion]
+        STRELOAD_REG=Local_U32_TotalTicks+1;
+                    ~~~~~~~~~~~~~~~~~~~~~^~
+SysTick_Prog.c(12): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+        f32 Local_U32_TickTime   = PRESCALUR / SYSTEM_CLOCK;       /* result will be in micro second */
+            ^
+SysTick_Prog.c(4): warning: no previous extern declaration for non-static variable 'SysTick_CallBack' [-Wmissing-variable-declarations]
+void (*SysTick_CallBack) (void);
+       ^
+SysTick_Prog.c(4): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+void (*SysTick_CallBack) (void);
+^
+5 warnings generated.
+compiling SysTick_Prog.c...
+linking...
+Program Size: Code=2232 RO-data=652 RW-data=4 ZI-data=616  
+FromELF: creating hex file...
+".\Objects\ARM_CORTEX_M4.axf" - 0 Error(s), 13 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.TM4C_DFP.1.1.0.pack
+                Keil.TM4C_DFP.1.1.0
+                Texas Instruments Tiva C Series Device Support and Examples
+   * Component: Startup Version: 1.0.1
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_Project1
+  C:/Users/minaa/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/minaa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:Startup:1.0.1
+      Include file:  Device/Include/TM4C123/TM4C123.h
+      Source file:   Device/Source/ARM/startup_TM4C123.s
+      Source file:   Device/Source/system_TM4C123.c
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
